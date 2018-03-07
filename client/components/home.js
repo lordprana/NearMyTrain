@@ -1,9 +1,10 @@
 import React from 'react';
-import {SelectStop} from './index';
+import {SelectStop, MapContainer} from './index';
 
 const Home = () => (
   <div>
-    <SelectStop />
+    <MapContainer />
+    <SelectStop line="A"/>
   </div>
 );
 
