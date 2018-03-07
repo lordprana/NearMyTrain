@@ -1,5 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import stops from '../data/subway-stops';
+import {setStations} from '../store';
 
 const getSortedStops = line => {
   const filteredStops = stops.filter(stop => stop.hasOwnProperty(line));
@@ -8,8 +10,12 @@ const getSortedStops = line => {
   });
 };
 
-const SelectStop = ({line}) => (
-  <select>
+const handleChange = (line, numStops, dispatchSetStations) => evt => {
+  dispatchSetStations(stops[evt.target.value - 1], line, numStops, stops); // Object Ids are 1 indexed
+}
+
+const SelectStop = ({line, dispatchSetStations }) => (
+  <select onChange={handleChange(line, 5, dispatchSetStations)}>
     {
       getSortedStops(line).map(stop => (
         <option key={stop.OBJECTID} value={stop.OBJECTID}>{stop.NAME}</option>
@@ -18,4 +24,12 @@ const SelectStop = ({line}) => (
   </select>
 );
 
-export default SelectStop;
+/**
+ * CONTAINER
+ */
+const mapState = null;
+
+const mapDispatch = { dispatchSetStations: setStations };
+
+export default connect(mapState, mapDispatch)(SelectStop);
+
