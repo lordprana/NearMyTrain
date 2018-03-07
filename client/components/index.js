@@ -4,3 +4,4 @@
  * having to figure out which file they belong to!
  */
 export {default as Home} from './home';
+export {default as SelectStop} from './select-stop';
