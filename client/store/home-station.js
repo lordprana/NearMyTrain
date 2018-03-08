@@ -20,8 +20,6 @@ export const setHomeStation = station => ({type: SET_HOME_STATION, station});
  */
 export const setStations = (homeStation, line, numStops, stationData) =>
   dispatch => {
-    console.log('STATION DATA', stationData);
-    console.log('LINE', line);
     const nearbyStations = stationData.filter(station => {
       if (station.hasOwnProperty(line)
         && station[line] <= homeStation[line] + numStops
@@ -32,7 +30,6 @@ export const setStations = (homeStation, line, numStops, stationData) =>
           return false;
         }
     });
-    console.log('NEARBY STATIONS', nearbyStations);
     dispatch(setNearbyStations(nearbyStations));
     dispatch(setHomeStation(homeStation));
   }

@@ -7,6 +7,8 @@ const App = () => {
   return (
     <div>
       <Home />
+      <div id="fake-map" /> { /* This needs to be here for Google Maps Places
+                                 API */ }
     </div>
   );
 };

@@ -4,8 +4,9 @@ import thunkMiddleware from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import homeStation from './home-station';
 import nearbyStations from './nearby-stations';
+import searchResults from './search-results';
 
-const reducer = combineReducers({homeStation, nearbyStations});
+const reducer = combineReducers({homeStation, nearbyStations, searchResults});
 const middleware = composeWithDevTools(applyMiddleware(
   thunkMiddleware,
   createLogger({collapsed: true})
@@ -15,3 +16,4 @@ const store = createStore(reducer, middleware);
 export default store;
 export * from './home-station';
 export * from './nearby-stations';
+export * from './search-results';

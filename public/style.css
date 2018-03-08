@@ -23,3 +23,24 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+.result-anchor {
+  position: relative;
+}
+
+.result-name {
+  display: none;
+  width:100px;
+  position: absolute;
+  bottom: 36px;
+  left: -48px;
+  background-color:white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+
+.show {
+  display: block;
+}

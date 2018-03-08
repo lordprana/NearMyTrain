@@ -8,14 +8,23 @@ const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibWF0dGhld2dhYmEiLCJhIjoiY2phNDJidWQxMnM1bzJ6bDdyb2xzdHFvbCJ9.o4O6sDd2I05FoooBkapplg'
 });
 
-const MapContainer = ({homeStation, nearbyStations}) => {
+const displayResultName = index => () => {
+  const resultNames = document.getElementsByClassName('result-name');
+  [...resultNames].forEach(result => {
+    if (result.id !== `result-name-${index}`) result.classList.remove('show');
+  });
+  const showResult = document.getElementById(`result-name-${index}`);
+  showResult.classList.toggle('show');
+};
+
+const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
 
   return (
     <Map
       style="mapbox://styles/mapbox/streets-v8"
       containerStyle={{
-        height: "100vh",
-        width: "100vw"
+        height: '80vh',
+        width: '100vw'
       }}
       center={(homeStation && [homeStation.lng, homeStation.lat])
         || NEW_YORK_COORDINATES}
@@ -38,8 +47,27 @@ const MapContainer = ({homeStation, nearbyStations}) => {
           </Marker>
         ))
       }
+      {
+        !searchResults.fetching && searchResults.results.length
+        && searchResults.results.map((result, i) => (
+          <Marker
+            key={i}
+            coordinates={[result.geometry.location.lng(),
+                          result.geometry.location.lat()]}
+            anchor="bottom">
+            <div className="result-anchor" onClick={displayResultName(i)}>
+              <div id={`result-name-${i}`} className="result-name">
+                <a href={`https://www.google.com/maps/search/?api=1&query_place_id=${result.place_id}&query=none`} target="_blank">
+                  {result.name}
+                </a>
+              </div>
+              <img src={result.icon} height="24" width="24" />
+            </div>
+          </Marker>
+        ))
+      }
     </Map>
-  )
+  );
 };
 
 
@@ -49,7 +77,8 @@ const MapContainer = ({homeStation, nearbyStations}) => {
 const mapState = state => {
   return {
     homeStation: state.homeStation,
-    nearbyStations: state.nearbyStations
+    nearbyStations: state.nearbyStations,
+    searchResults: state.searchResults
   };
 };
 

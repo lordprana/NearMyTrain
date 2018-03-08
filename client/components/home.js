@@ -1,10 +1,11 @@
 import React from 'react';
-import {SelectStop, MapContainer} from './index';
+import {SelectStop, MapContainer, Search} from './index';
 
 const Home = () => (
   <div>
     <MapContainer />
     <SelectStop line="A"/>
+    <Search />
   </div>
 );
 
