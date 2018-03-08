@@ -40,6 +40,34 @@ function convertToLatLng(geom) {
 
 const lines = [
   {
+    line: '1',
+    terminalStop: 'Van Cortlandt Park - 242nd St'
+  },
+  {
+    line: '2',
+    terminalStop: 'Wakefield - 241st St'
+  },
+  {
+    line: '3',
+    terminalStop: 'Harlem - 148 St'
+  },
+  {
+    line: '4',
+    terminalStop: 'Woodlawn'
+  },
+  {
+    line: '5',
+    terminalStop: 'Eastchester - Dyre Ave'
+  },
+  {
+    line: '6',
+    terminalStop: 'Pelham Bay Park'
+  },
+  {
+    line: '7',
+    terminalStop: 'Flushing - Main St'
+  },
+  {
     line: 'A',
     terminalStop: 'Inwood - 207th St'
   },
@@ -50,7 +78,35 @@ const lines = [
   {
     line: 'E',
     terminalStop: 'Jamaica Ctr - Parsons / Archer'
-  }
+  },
+  {
+    line: 'D',
+    terminalStop: 'Norwood - 205th St'
+  },
+  {
+    line: 'F',
+    terminalStop: 'Jamaica - 179th St'
+  },
+  {
+    line: 'G',
+    terminalStop: 'Long Island City - Court Sq'
+  },
+  {
+    line: 'J',
+    terminalStop: 'Jamaica Ctr - Parsons / Archer'
+  },
+  {
+    line: 'L',
+    terminalStop: '8th Ave'
+  },
+  {
+    line: 'N',
+    terminalStop: 'Astoria - Ditmars Blvd'
+  },
+  {
+    line: 'Q',
+    terminalStop: '96th St'
+  },
 ];
 
 lines.forEach(line => {

@@ -44,3 +44,36 @@ form div {
 .show {
   display: block;
 }
+
+.home-station-select {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -125px;
+  width: 250px;
+  text-align: center;
+}
+
+.search-form {
+  position: fixed;
+  bottom: 37px;
+  left: 50%;
+  margin-left: -125px;
+}
+
+.search-input {
+  width: 200px;
+}
+
+.stations-marker {
+  position: relative;
+}
+
+.stations-marker-name {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  left: -35px;
+  top: 35px;
+  line-height: 14px;
+}

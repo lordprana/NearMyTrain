@@ -23,7 +23,7 @@ const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
     <Map
       style="mapbox://styles/mapbox/streets-v8"
       containerStyle={{
-        height: '80vh',
+        height: '100vh',
         width: '100vw'
       }}
       center={(homeStation && [homeStation.lng, homeStation.lat])
@@ -34,7 +34,12 @@ const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
         <Marker
           coordinates={[homeStation.lng, homeStation.lat]}
           anchor="bottom">
-          <img src="/images/home-station.png" />
+          <div className="stations-marker">
+            <img src="/images/home-station.png" />
+            <div className="stations-marker-name">
+              {homeStation.NAME}
+            </div>
+          </div>
         </Marker>
       }
       {
@@ -43,7 +48,12 @@ const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
             key={station.OBJECTID}
             coordinates={[station.lng, station.lat]}
             anchor="bottom">
-            <img src="/images/nearby-station.png" />
+            <div className="stations-marker">
+              <img src="/images/nearby-station.png" />
+              <div className="stations-marker-name">
+                {station.NAME}
+              </div>
+            </div>
           </Marker>
         ))
       }

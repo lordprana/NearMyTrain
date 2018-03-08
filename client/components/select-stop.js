@@ -16,7 +16,10 @@ const handleChange = (line, numStops, dispatchSetStations) => evt => {
 }
 
 const SelectStop = ({line, dispatchSetStations}) => (
-  <select onChange={handleChange(line, 5, dispatchSetStations)}>
+  <select
+    onChange={handleChange(line, 5, dispatchSetStations)}
+    className="home-station-select">
+    <option selected="true" disabled="disabled">Choose home stop</option>
     {
       getSortedStops(line).map(stop => (
         <option key={stop.OBJECTID} value={stop.OBJECTID}>{stop.NAME}</option>
