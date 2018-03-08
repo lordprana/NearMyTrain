@@ -1,5 +1,6 @@
 const stops = [
   {
+     4: 30,
      6: 34,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 1,
@@ -11,6 +12,7 @@ const stops = [
      lng: -73.99106999861966
   },
   {
+     4: 33,
      6: 37,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 2,
@@ -23,6 +25,7 @@ const stops = [
   },
   {
      1: 24,
+     2: 31,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 3,
      NAME: '50th St',
@@ -33,8 +36,9 @@ const stops = [
      lng: -73.98384899986625
   },
   {
-     2: 39,
+     2: 51,
      3: 21,
+     4: 41,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 4,
      NAME: 'Bergen St',
@@ -46,6 +50,7 @@ const stops = [
   },
   {
      3: 32,
+     4: 52,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 5,
      NAME: 'Pennsylvania Ave',
@@ -75,6 +80,7 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.800581558114956,
      lng: -73.95806670661364,
+     A: 13,
      C: 8
   },
   {
@@ -86,7 +92,8 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.67991899941601,
      lng: -73.94085899871263,
-     C: 33
+     A: 37,
+     C: 32
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -94,7 +101,10 @@ const stops = [
      NAME: '65th St',
      the_geom: 'POINT (-73.8987883783301 40.74971952935675)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.74971952935675,
+     lng: -73.8987883783301,
+     E: 14
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -102,7 +112,10 @@ const stops = [
      NAME: '36th St',
      the_geom: 'POINT (-73.92901818461539 40.75196004401078)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.75196004401078,
+     lng: -73.92901818461539,
+     E: 18
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -158,7 +171,8 @@ const stops = [
      lat: 40.690648119969794,
      lng: -73.98177094440949,
      D: 22,
-     Q: 9
+     N: 22,
+     Q: 15
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -166,7 +180,10 @@ const stops = [
      NAME: 'Beach 105th St',
      the_geom: 'POINT (-73.82758075034528 40.58326843810286)',
      LINE: 'A-S',
-     NOTES: 'A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times'
+     NOTES: 'A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times',
+     lat: 40.58326843810286,
+     lng: -73.82758075034528,
+     A: 59
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -174,11 +191,14 @@ const stops = [
      NAME: 'Beach 90th St',
      the_geom: 'POINT (-73.81365140419632 40.58809156457325)',
      LINE: 'A-S',
-     NOTES: 'A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times'
+     NOTES: 'A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times',
+     lat: 40.58809156457325,
+     lng: -73.81365140419632,
+     A: 57
   },
   {
      2: 14,
-     5: 9,
+     5: 18,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 18,
      NAME: 'Freeman St',
@@ -190,7 +210,7 @@ const stops = [
   },
   {
      2: 16,
-     5: 11,
+     5: 20,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 19,
      NAME: 'Intervale Ave',
@@ -300,8 +320,8 @@ const stops = [
      lng: -73.85122199961472
   },
   {
-     4: 20,
-     5: 22,
+     4: 34,
+     5: 31,
      6: 38,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 29,
@@ -324,8 +344,8 @@ const stops = [
      lng: -73.8470359987544
   },
   {
-     4: 18,
-     5: 20,
+     4: 25,
+     5: 29,
      6: 29,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 31,
@@ -337,6 +357,7 @@ const stops = [
      lng: -73.9767132992584
   },
   {
+     4: 26,
      6: 30,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 32,
@@ -348,6 +369,7 @@ const stops = [
      lng: -73.98207600148947
   },
   {
+     4: 19,
      6: 23,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 33,
@@ -359,6 +381,7 @@ const stops = [
      lng: -73.9510700015425
   },
   {
+     4: 21,
      6: 25,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 34,
@@ -386,7 +409,11 @@ const stops = [
      NAME: 'Union St',
      the_geom: 'POINT (-73.98310999909673 40.67731566735096)',
      LINE: 'D-N-R',
-     NOTES: 'D,N-nights, R-all other times'
+     NOTES: 'D,N-nights, R-all other times',
+     lat: 40.67731566735096,
+     lng: -73.98310999909673,
+     D: 24,
+     N: 24
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -394,7 +421,10 @@ const stops = [
      NAME: 'Elmhurst Ave',
      the_geom: 'POINT (-73.8820347465864 40.74237007972169)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.74237007972169,
+     lng: -73.8820347465864,
+     E: 12
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -405,10 +435,12 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.678822000873375,
      lng: -73.92078599933306,
-     C: 35
+     A: 39,
+     C: 34
   },
   {
      2: 9,
+     5: 6,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 39,
      NAME: 'Pelham Pkwy',
@@ -420,6 +452,7 @@ const stops = [
   },
   {
      2: 6,
+     5: 9,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 40,
      NAME: 'Gun Hill Rd',
@@ -431,6 +464,7 @@ const stops = [
   },
   {
      2: 2,
+     5: 13,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 41,
      NAME: 'Nereid Ave (238 St)',
@@ -441,9 +475,10 @@ const stops = [
      lng: -73.8543153107622
   },
   {
-     2: 42,
+     2: 54,
      3: 24,
-     4: 27,
+     4: 44,
+     5: 38,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 42,
      NAME: 'Franklin Ave',
@@ -455,7 +490,7 @@ const stops = [
   },
   {
      2: 15,
-     5: 10,
+     5: 19,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 43,
      NAME: 'Simpson St',
@@ -467,6 +502,7 @@ const stops = [
   },
   {
      2: 10,
+     5: 14,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 44,
      NAME: 'Bronx Park East',
@@ -477,7 +513,8 @@ const stops = [
      lng: -73.86835609178098
   },
   {
-     2: 45,
+     2: 57,
+     5: 41,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 45,
      NAME: 'Winthrop St',
@@ -489,6 +526,7 @@ const stops = [
   },
   {
      3: 33,
+     4: 53,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 46,
      NAME: 'Van Siclen Ave',
@@ -521,8 +559,8 @@ const stops = [
      lng: -73.92569199505733
   },
   {
-     4: 17,
-     5: 19,
+     4: 23,
+     5: 28,
      6: 27,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 49,
@@ -597,7 +635,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.603995001687544,
      lng: -73.75540499924732,
-     A: 38
+     A: 66
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -608,6 +646,7 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.77551939729258,
      lng: -73.976336575218,
+     A: 18,
      C: 13
   },
   {
@@ -619,6 +658,7 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.79161879767014,
      lng: -73.96460245687166,
+     A: 15,
      C: 10
   },
   {
@@ -662,7 +702,10 @@ const stops = [
      NAME: 'Prospect Park',
      the_geom: 'POINT (-73.96203130426609 40.6616334551018)',
      LINE: 'B-Q-S',
-     NOTES: 'B-weekdays and evenings, Q,S to Franklin Av-Fulton St-all times'
+     NOTES: 'B-weekdays and evenings, Q,S to Franklin Av-Fulton St-all times',
+     lat: 40.6616334551018,
+     lng: -73.96203130426609,
+     Q: 19
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -673,7 +716,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.63147876093745,
      lng: -73.99534882595742,
-     D: 28
+     D: 32
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -695,7 +738,7 @@ const stops = [
      NOTES: 'E,F-all times',
      lat: 40.714034819571026,
      lng: -73.8303702709878,
-     E: 4,
+     E: 5,
      F: 6
   },
   {
@@ -719,7 +762,7 @@ const stops = [
      NOTES: 'E-all times, M-weekdays and evenings',
      lat: 40.747768121414325,
      lng: -73.94605470266329,
-     E: 8
+     E: 20
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -727,7 +770,10 @@ const stops = [
      NAME: '67th Ave',
      the_geom: 'POINT (-73.85286048434907 40.726505475813006)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.726505475813006,
+     lng: -73.85286048434907,
+     E: 8
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -735,7 +781,10 @@ const stops = [
      NAME: 'Grand Ave - Newtown',
      the_geom: 'POINT (-73.87722085669182 40.736813418197144)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.736813418197144,
+     lng: -73.87722085669182,
+     E: 11
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -834,7 +883,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.634970999647166,
      lng: -74.01151599772157,
-     N: 23
+     N: 32
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -868,7 +917,7 @@ const stops = [
      lat: 40.75461199851542,
      lng: -73.98676800153976,
      N: 12,
-     Q: 6
+     Q: 7
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -895,7 +944,7 @@ const stops = [
      NOTES: 'S Euclid Av to Ozone Park-Lefferts Blvd-nights, A-all other times',
      lat: 40.68433100001238,
      lng: -73.83216299845388,
-     A: 29
+     A: 51
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -910,6 +959,7 @@ const stops = [
      F: 19
   },
   {
+     4: 24,
      6: 28,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 85,
@@ -922,6 +972,7 @@ const stops = [
   },
   {
      1: 19,
+     2: 26,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 86,
      NAME: '86th St',
@@ -933,6 +984,7 @@ const stops = [
   },
   {
      2: 3,
+     5: 12,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 87,
      NAME: '233rd St',
@@ -944,6 +996,7 @@ const stops = [
   },
   {
      1: 22,
+     2: 29,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 88,
      NAME: '66th St - Lincoln Ctr',
@@ -966,6 +1019,7 @@ const stops = [
   },
   {
      1: 33,
+     2: 40,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 90,
      NAME: 'Canal St',
@@ -987,6 +1041,7 @@ const stops = [
      lng: -73.83632199755944
   },
   {
+     4: 28,
      6: 32,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 92,
@@ -1010,6 +1065,7 @@ const stops = [
   },
   {
      1: 23,
+     2: 30,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 94,
      NAME: '59th St - Columbus Circle',
@@ -1032,6 +1088,7 @@ const stops = [
   },
   {
      1: 28,
+     2: 35,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 96,
      NAME: '23rd St',
@@ -1043,6 +1100,7 @@ const stops = [
   },
   {
      1: 32,
+     2: 39,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 97,
      NAME: 'Houston St',
@@ -1061,7 +1119,7 @@ const stops = [
      NOTES: 'S Euclid Av to Ozone Park-Lefferts Blvd-nights, A-all other times',
      lat: 40.681711001091195,
      lng: -73.83768300060997,
-     A: 28
+     A: 50
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1069,7 +1127,10 @@ const stops = [
      NAME: 'Broad Channel',
      the_geom: 'POINT (-73.81583268782963 40.60840218069683)',
      LINE: 'A-S',
-     NOTES: 'A,S to Rockaway Park-all times'
+     NOTES: 'A,S to Rockaway Park-all times',
+     lat: 40.60840218069683,
+     lng: -73.81583268782963,
+     A: 56
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1080,7 +1141,7 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.57631166708091,
      lng: -73.96850099975177,
-     Q: 25
+     Q: 33
   },
   {
      7: 18,
@@ -1094,6 +1155,7 @@ const stops = [
      lng: -73.95358099875249
   },
   {
+     4: 22,
      6: 26,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 102,
@@ -1125,11 +1187,11 @@ const stops = [
      NOTES: 'A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights',
      lat: 40.680428999588415,
      lng: -73.8438529979573,
-     A: 27
+     A: 49
   },
   {
-     4: 19,
-     5: 21,
+     4: 29,
+     5: 30,
      6: 33,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 105,
@@ -1208,7 +1270,7 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.64390459860419,
      lng: -73.96435779623125,
-     Q: 14
+     Q: 22
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1219,7 +1281,7 @@ const stops = [
      NOTES: 'B-weekdays and evenings, Q-all times',
      lat: 40.65049324646484,
      lng: -73.96288246192114,
-     Q: 13
+     Q: 21
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1230,7 +1292,7 @@ const stops = [
      NOTES: 'B-weekdays and evenings, Q-all times',
      lat: 40.63514193733789,
      lng: -73.96269486837261,
-     Q: 16
+     Q: 24
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1241,11 +1303,12 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.65507304163716,
      lng: -73.96145343987648,
-     Q: 12
+     Q: 20
   },
   {
-     2: 40,
+     2: 52,
      3: 22,
+     4: 42,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 115,
      NAME: 'Grand Army Plaza',
@@ -1256,9 +1319,10 @@ const stops = [
      lng: -73.9709563319228
   },
   {
-     2: 38,
+     2: 50,
      3: 20,
-     4: 26,
+     4: 40,
+     5: 37,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 116,
      NAME: "Atlantic Av - Barclay's Center",
@@ -1277,7 +1341,8 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.678339999883505,
      lng: -73.91194599726617,
-     C: 36
+     A: 40,
+     C: 35
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1310,7 +1375,7 @@ const stops = [
      NOTES: 'B-weekdays and evenings, Q-all times',
      lat: 40.67710217983294,
      lng: -73.97285279191024,
-     Q: 11
+     Q: 18
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1321,7 +1386,7 @@ const stops = [
      NOTES: 'B-weekdays and evenings, Q-all times',
      lat: 40.684488323453685,
      lng: -73.97678343963167,
-     Q: 10
+     Q: 16
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1333,10 +1398,12 @@ const stops = [
      lat: 40.683665667279435,
      lng: -73.97880999956767,
      D: 23,
-     N: 20
+     N: 23,
+     Q: 17
   },
   {
-     4: 24,
+     4: 38,
+     5: 35,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 123,
      NAME: 'Borough Hall',
@@ -1352,7 +1419,10 @@ const stops = [
      NAME: 'Aqueduct Racetrack',
      the_geom: 'POINT (-73.83591899965162 40.672096999172844)',
      LINE: 'A',
-     NOTES: 'A-to Manhattan only, racing days only'
+     NOTES: 'A-to Manhattan only, racing days only',
+     lat: 40.672096999172844,
+     lng: -73.83591899965162,
+     A: 53
   },
   {
      5: 5,
@@ -1385,13 +1455,14 @@ const stops = [
      NOTES: 'A-all times, C-all times exc nights',
      lat: 40.68043800006226,
      lng: -73.95042600099683,
-     A: 20,
-     C: 32
+     A: 36,
+     C: 31
   },
   {
-     2: 37,
+     2: 49,
      3: 19,
-     4: 25,
+     4: 39,
+     5: 36,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 128,
      NAME: 'Nevins St',
@@ -1402,8 +1473,9 @@ const stops = [
      lng: -73.98040679874578
   },
   {
-     2: 41,
+     2: 53,
      3: 23,
+     4: 43,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 129,
      NAME: 'Eastern Pkwy - Bklyn Museum',
@@ -1414,7 +1486,8 @@ const stops = [
      lng: -73.96422203748425
   },
   {
-     2: 47,
+     2: 59,
+     5: 43,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 130,
      NAME: 'Beverly Rd',
@@ -1425,7 +1498,8 @@ const stops = [
      lng: -73.94884798381702
   },
   {
-     2: 46,
+     2: 58,
+     5: 42,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 131,
      NAME: 'Church Ave',
@@ -1436,7 +1510,8 @@ const stops = [
      lng: -73.94945514035334
   },
   {
-     2: 48,
+     2: 60,
+     5: 44,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 132,
      NAME: 'Newkirk Ave',
@@ -1447,7 +1522,8 @@ const stops = [
      lng: -73.94829990822407
   },
   {
-     2: 49,
+     2: 61,
+     5: 45,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 133,
      NAME: 'Brooklyn College - Flatbush Ave',
@@ -1458,7 +1534,8 @@ const stops = [
      lng: -73.94754120734406
   },
   {
-     2: 44,
+     2: 56,
+     5: 40,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 134,
      NAME: 'Sterling St',
@@ -1470,7 +1547,7 @@ const stops = [
   },
   {
      3: 27,
-     4: 28,
+     4: 47,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 135,
      NAME: 'Crown Hts - Utica Ave',
@@ -1482,6 +1559,7 @@ const stops = [
   },
   {
      3: 26,
+     4: 46,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 136,
      NAME: 'Kingston Ave',
@@ -1537,7 +1615,7 @@ const stops = [
   },
   {
      4: 14,
-     5: 16,
+     5: 25,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 141,
      NAME: '138th St - Grand Concourse',
@@ -1556,7 +1634,7 @@ const stops = [
      NOTES: 'E-all times, M-weekdays and evenings',
      lat: 40.76008683231326,
      lng: -73.9752485052734,
-     E: 10
+     E: 22
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1567,7 +1645,7 @@ const stops = [
      NOTES: 'E-all times, M-weekdays and evenings',
      lat: 40.75746830782865,
      lng: -73.96907237490204,
-     E: 9
+     E: 21
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1578,7 +1656,8 @@ const stops = [
      NOTES: 'N-all times, R-all times exc nights, part time',
      lat: 40.74545399979951,
      lng: -73.98869800128737,
-     N: 14
+     N: 14,
+     Q: 9
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1590,7 +1669,7 @@ const stops = [
      lat: 40.74964456009442,
      lng: -73.9879368338264,
      N: 13,
-     Q: 7
+     Q: 8
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1609,10 +1688,7 @@ const stops = [
      NAME: 'Times Sq - 42nd St',
      the_geom: 'POINT (-73.98622899953202 40.755983000570076)',
      LINE: 'S',
-     NOTES: 'S to Grand Central-all times exc nights, closed nights-use 7',
-     lat: 40.755983000570076,
-     lng: -73.98622899953202,
-     C: 17
+     NOTES: 'S to Grand Central-all times exc nights, closed nights-use 7'
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -1769,11 +1845,12 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.796060739904526,
      lng: -73.96137008267617,
+     A: 14,
      C: 9
   },
   {
      1: 21,
-     2: 26,
+     2: 28,
      3: 8,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 162,
@@ -1793,6 +1870,7 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.78134608418206,
      lng: -73.97209794937208,
+     A: 17,
      C: 12
   },
   {
@@ -1804,6 +1882,7 @@ const stops = [
      NOTES: 'E-evenings, weekends, nights, F-all times',
      lat: 40.71804465348743,
      lng: -73.83692369387158,
+     E: 6,
      F: 7
   },
   {
@@ -1815,6 +1894,7 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.78582304678557,
      lng: -73.96882849429672,
+     A: 16,
      C: 11
   },
   {
@@ -1994,7 +2074,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.59294299908617,
      lng: -73.77601299999507,
-     A: 35
+     A: 63
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2005,7 +2085,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.59237400121235,
      lng: -73.7885219980118,
-     A: 34
+     A: 62
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2013,7 +2093,10 @@ const stops = [
      NAME: 'Beach 98th St',
      the_geom: 'POINT (-73.82052058959523 40.58538569133279)',
      LINE: 'A-S',
-     NOTES: 'A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times'
+     NOTES: 'A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times',
+     lat: 40.58538569133279,
+     lng: -73.82052058959523,
+     A: 58
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2024,7 +2107,7 @@ const stops = [
      NOTES: 'A-rush hours AM northbound, PM southbound, S to Broad Channel-all times',
      lat: 40.580955865573515,
      lng: -73.83559008701239,
-     C: 42
+     A: 60
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2035,7 +2118,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.59539800166876,
      lng: -73.76817499939688,
-     A: 36
+     A: 64
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2046,7 +2129,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.60006600105881,
      lng: -73.76135299762073,
-     A: 37
+     A: 65
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2098,7 +2181,10 @@ const stops = [
      NAME: '63rd Dr - Rego Park',
      the_geom: 'POINT (-73.86161820097203 40.729763972422425)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.729763972422425,
+     lng: -73.86161820097203,
+     E: 9
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2109,10 +2195,11 @@ const stops = [
      NOTES: 'A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights',
      lat: 40.67704400054478,
      lng: -73.86504999877702,
-     A: 24
+     A: 46
   },
   {
      1: 20,
+     2: 27,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 193,
      NAME: '79th St',
@@ -2135,6 +2222,7 @@ const stops = [
   },
   {
      1: 31,
+     2: 38,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 195,
      NAME: 'Christopher St - Sheridan Sq',
@@ -2153,7 +2241,7 @@ const stops = [
      NOTES: 'S to Euclid Av-nights, A-all other times',
      lat: 40.68595099878361,
      lng: -73.82579799906613,
-     A: 30
+     A: 52
   },
   {
      7: 21,
@@ -2176,10 +2264,11 @@ const stops = [
      lat: 40.576033818103646,
      lng: -73.97595787413822,
      F: 44,
-     Q: 26
+     Q: 34
   },
   {
      1: 27,
+     2: 34,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 199,
      NAME: '28th St',
@@ -2190,6 +2279,7 @@ const stops = [
      lng: -73.99336500134324
   },
   {
+     4: 27,
      6: 31,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 200,
@@ -2224,6 +2314,7 @@ const stops = [
   },
   {
      1: 29,
+     2: 36,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 203,
      NAME: '18th St',
@@ -2253,7 +2344,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.59092700078133,
      lng: -73.7969239998421,
-     A: 33
+     A: 61
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2264,9 +2355,9 @@ const stops = [
      NOTES: 'A,E-all times, C-all times exc nights',
      lat: 40.73233799774325,
      lng: -74.00049500225435,
-     A: 13,
-     C: 21,
-     E: 17
+     A: 25,
+     C: 20,
+     E: 29
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2336,6 +2427,7 @@ const stops = [
   },
   {
      3: 34,
+     4: 54,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 213,
      NAME: 'New Lots Ave',
@@ -2354,7 +2446,8 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.67270999906104,
      lng: -73.8903580002471,
-     C: 39
+     A: 43,
+     C: 38
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2380,6 +2473,7 @@ const stops = [
   },
   {
      3: 31,
+     4: 51,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 217,
      NAME: 'Junius St',
@@ -2391,6 +2485,7 @@ const stops = [
   },
   {
      3: 30,
+     4: 50,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 218,
      NAME: 'Rockaway Ave',
@@ -2424,6 +2519,7 @@ const stops = [
   },
   {
      3: 29,
+     4: 49,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 221,
      NAME: 'Saratoga Ave',
@@ -2435,6 +2531,7 @@ const stops = [
   },
   {
      3: 28,
+     4: 48,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 222,
      NAME: 'Sutter Ave - Rutland Road',
@@ -2486,7 +2583,8 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.6741300014559,
      lng: -73.88074999747269,
-     C: 40
+     A: 44,
+     C: 39
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2549,7 +2647,10 @@ const stops = [
      NAME: 'Woodhaven Blvd - Queens Mall',
      the_geom: 'POINT (-73.86943208612348 40.73309737380972)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.73309737380972,
+     lng: -73.86943208612348,
+     E: 10
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2595,7 +2696,10 @@ const stops = [
      NAME: '46th St',
      the_geom: 'POINT (-73.91352174995538 40.756316952608096)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.756316952608096,
+     lng: -73.91352174995538,
+     E: 16
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2603,7 +2707,10 @@ const stops = [
      NAME: 'Northern Blvd',
      the_geom: 'POINT (-73.90606508052358 40.752824829236076)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.752824829236076,
+     lng: -73.90606508052358,
+     E: 15
   },
   {
      7: 12,
@@ -2647,7 +2754,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.66047600004959,
      lng: -73.83030100071032,
-     A: 32
+     A: 55
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2658,7 +2765,7 @@ const stops = [
      NOTES: 'A-all times',
      lat: 40.668234001699815,
      lng: -73.83405799948723,
-     A: 31
+     A: 54
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -2669,6 +2776,7 @@ const stops = [
      NOTES: 'E-evenings, weekends, nights, F-all times',
      lat: 40.70916181536946,
      lng: -73.82069263637443,
+     E: 4,
      F: 5
   },
   {
@@ -2680,7 +2788,7 @@ const stops = [
      NOTES: 'E,F-all times, M-weekdays and evenings, R-all times exc nights',
      lat: 40.72159430953587,
      lng: -73.84451672012669,
-     E: 5,
+     E: 7,
      F: 8
   },
   {
@@ -2708,6 +2816,7 @@ const stops = [
   },
   {
      2: 4,
+     5: 11,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 248,
      NAME: '225th St',
@@ -2763,7 +2872,7 @@ const stops = [
   },
   {
      2: 18,
-     5: 13,
+     5: 22,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 253,
      NAME: 'Jackson Ave',
@@ -2775,7 +2884,7 @@ const stops = [
   },
   {
      2: 17,
-     5: 12,
+     5: 21,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 254,
      NAME: 'Prospect Ave',
@@ -2798,7 +2907,7 @@ const stops = [
   },
   {
      2: 13,
-     5: 8,
+     5: 17,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 256,
      NAME: '174th St',
@@ -2810,6 +2919,7 @@ const stops = [
   },
   {
      2: 8,
+     5: 7,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 257,
      NAME: 'Allerton Ave',
@@ -2975,7 +3085,7 @@ const stops = [
   },
   {
      2: 12,
-     5: 7,
+     5: 16,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 272,
      NAME: 'West Farms Sq - E Tremont Av',
@@ -2987,6 +3097,7 @@ const stops = [
   },
   {
      2: 5,
+     5: 10,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 273,
      NAME: '219th St',
@@ -3020,6 +3131,7 @@ const stops = [
   },
   {
      2: 7,
+     5: 8,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 276,
      NAME: 'Burke Ave',
@@ -3116,7 +3228,7 @@ const stops = [
   },
   {
      2: 11,
-     5: 6,
+     5: 15,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 285,
      NAME: 'E 180th St',
@@ -3158,7 +3270,7 @@ const stops = [
   },
   {
      2: 20,
-     5: 15,
+     5: 24,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 289,
      NAME: '149th St - Grand Concourse',
@@ -3170,7 +3282,7 @@ const stops = [
   },
   {
      2: 19,
-     5: 14,
+     5: 23,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 290,
      NAME: '3rd Ave - 149th St',
@@ -3233,7 +3345,7 @@ const stops = [
      NOTES: 'A,D-all times, B-weekdays and evenings, C-all times exc nights',
      lat: 40.824766360871905,
      lng: -73.94408792823116,
-     A: 7,
+     A: 9,
      C: 4,
      D: 12
   },
@@ -3268,8 +3380,8 @@ const stops = [
      NOTES: 'A-all times, C-all times exc nights',
      lat: 40.67936399950546,
      lng: -73.93072899914027,
-     A: 21,
-     C: 34
+     A: 38,
+     C: 33
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3277,7 +3389,10 @@ const stops = [
      NAME: 'Steinway St',
      the_geom: 'POINT (-73.9205264716827 40.75698735912575)',
      LINE: 'E-M-R',
-     NOTES: 'E-nights, R-all other times, M-weekdays and evenings'
+     NOTES: 'E-nights, R-all other times, M-weekdays and evenings',
+     lat: 40.75698735912575,
+     lng: -73.9205264716827,
+     E: 17
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3359,7 +3474,7 @@ const stops = [
      NOTES: 'E-all times, M-weekdays and evenings, R-all times exc nights',
      lat: 40.74891771986323,
      lng: -73.93713823965695,
-     E: 7
+     E: 19
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3397,7 +3512,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.636260890961395,
      lng: -73.9946587805514,
-     D: 27
+     D: 31
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3408,7 +3523,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.63138566722445,
      lng: -74.00535100046275,
-     N: 24
+     N: 33
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3419,7 +3534,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.59770366695856,
      lng: -73.98682900011477,
-     D: 35
+     D: 39
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3430,7 +3545,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.601950461572315,
      lng: -73.9936762000529,
-     D: 34
+     D: 38
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3441,7 +3556,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.617108999866005,
      lng: -73.98452199846113,
-     N: 27
+     N: 36
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3452,7 +3567,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.620686997680025,
      lng: -73.99045399865993,
-     N: 26
+     N: 35
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3479,7 +3594,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.61315892569516,
      lng: -74.00058287431507,
-     D: 31
+     D: 35
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3490,7 +3605,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.61925870977273,
      lng: -73.99884094850685,
-     D: 30
+     D: 34
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3501,7 +3616,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.60467699816932,
      lng: -73.99817432157568,
-     D: 33
+     D: 37
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3512,7 +3627,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.60773573171741,
      lng: -74.00159259239406,
-     D: 32
+     D: 36
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3523,7 +3638,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.626224462922195,
      lng: -73.99685724994863,
-     D: 29
+     D: 33
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3534,7 +3649,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.62484166725887,
      lng: -73.99635300025969,
-     N: 25
+     N: 34
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3567,7 +3682,7 @@ const stops = [
      NOTES: 'B-weekdays and evenings, Q-all times',
      lat: 40.577710196642435,
      lng: -73.96135378598797,
-     Q: 24
+     Q: 32
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3578,7 +3693,7 @@ const stops = [
      NOTES: 'B-weekdays and evenings, Q-all times',
      lat: 40.58654754707536,
      lng: -73.95405791257907,
-     Q: 23
+     Q: 31
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3589,7 +3704,7 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.59930895095475,
      lng: -73.95581122316301,
-     Q: 21
+     Q: 29
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3600,7 +3715,7 @@ const stops = [
      NOTES: 'B-weekdays and evenings, Q-all times',
      lat: 40.608638645396006,
      lng: -73.95760873538083,
-     Q: 20
+     Q: 28
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3611,7 +3726,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.597235999920436,
      lng: -73.97908400099428,
-     N: 30
+     N: 39
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3622,7 +3737,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.60405899980493,
      lng: -73.98037300229343,
-     N: 29
+     N: 38
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3655,7 +3770,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.58884066651933,
      lng: -73.98376500045946,
-     D: 36
+     D: 40
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3666,7 +3781,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.59246500088859,
      lng: -73.97818899936274,
-     N: 31
+     N: 40
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3710,7 +3825,7 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.617397744443736,
      lng: -73.9592431052215,
-     Q: 19
+     Q: 27
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3721,7 +3836,7 @@ const stops = [
      NOTES: 'N-all times',
      lat: 40.61145578989005,
      lng: -73.98178001069293,
-     N: 28
+     N: 37
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3743,7 +3858,7 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.625022819915166,
      lng: -73.96069316246925,
-     Q: 18
+     Q: 26
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3754,7 +3869,7 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.62920837758969,
      lng: -73.96151793942495,
-     Q: 17
+     Q: 25
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3765,7 +3880,7 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.59532169111695,
      lng: -73.95507827493762,
-     Q: 22
+     Q: 30
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3787,8 +3902,9 @@ const stops = [
      NOTES: 'A-nights, C-all other times, E-all times',
      lat: 40.76245599925997,
      lng: -73.98598400026407,
+     A: 20,
      C: 15,
-     E: 12
+     E: 24
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3799,7 +3915,7 @@ const stops = [
      NOTES: 'D,E-all times, B-weekdays and evenings',
      lat: 40.76297015245628,
      lng: -73.98169782344476,
-     E: 11,
+     E: 23,
      D: 15
   },
   {
@@ -3834,7 +3950,8 @@ const stops = [
      NOTES: 'F-all times, Q all times',
      lat: 40.76461809442373,
      lng: -73.96608964413245,
-     F: 12
+     F: 12,
+     Q: 4
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3856,7 +3973,7 @@ const stops = [
      NOTES: 'A,D-all times, B-weekdays and evenings, C-all times exc nights',
      lat: 40.768249531776064,
      lng: -73.98164872301398,
-     A: 9,
+     A: 19,
      C: 14,
      D: 14
   },
@@ -3870,7 +3987,7 @@ const stops = [
      lat: 40.759801973870694,
      lng: -73.98420956591096,
      N: 11,
-     Q: 5
+     Q: 6
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3882,7 +3999,7 @@ const stops = [
      lat: 40.76456552501829,
      lng: -73.98072973372128,
      N: 10,
-     Q: 4
+     Q: 5
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3908,7 +4025,7 @@ const stops = [
   },
   {
      1: 26,
-     2: 28,
+     2: 33,
      3: 10,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 358,
@@ -3921,7 +4038,7 @@ const stops = [
   },
   {
      1: 25,
-     2: 27,
+     2: 32,
      3: 9,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 359,
@@ -3941,8 +4058,8 @@ const stops = [
      NOTES: 'A-all times, C-all times exc nights',
      lat: 40.71016216530185,
      lng: -74.00762309323994,
-     A: 16,
-     C: 25
+     A: 29,
+     C: 24
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3953,8 +4070,8 @@ const stops = [
      NOTES: 'A-all times, C-all times exc nights',
      lat: 40.714111000774025,
      lng: -74.00858473570133,
-     A: 15,
-     C: 24
+     A: 28,
+     C: 23
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -3965,9 +4082,9 @@ const stops = [
      NOTES: 'A,E-all times, C-all times exc nights',
      lat: 40.757307998551504,
      lng: -73.98973500085859,
-     A: 10,
+     A: 21,
      C: 16,
-     E: 13
+     E: 25
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4023,8 +4140,8 @@ const stops = [
      NOTES: 'A,G-all times, C-all times exc nights',
      lat: 40.68840847580642,
      lng: -73.98503624034139,
-     A: 19,
-     C: 28,
+     A: 32,
+     C: 27,
      G: 13
   },
   {
@@ -4036,8 +4153,8 @@ const stops = [
      NOTES: 'A,F-all times, C-all times exc nights',
      lat: 40.692470636847084,
      lng: -73.98721815267317,
-     A: 18,
-     C: 27,
+     A: 31,
+     C: 26,
      F: 25
   },
   {
@@ -4137,7 +4254,10 @@ const stops = [
      NAME: 'Jay St - MetroTech',
      the_geom: 'POINT (-73.98605667854612 40.69225539645323)',
      LINE: 'N-R',
-     NOTES: 'N-nights, R-all other times'
+     NOTES: 'N-nights, R-all other times',
+     lat: 40.69225539645323,
+     lng: -73.98605667854612,
+     N: 21
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4145,7 +4265,10 @@ const stops = [
      NAME: 'Court St',
      the_geom: 'POINT (-73.99181830901125 40.694196480776995)',
      LINE: 'N-R',
-     NOTES: 'N-nights, R-all other times'
+     NOTES: 'N-nights, R-all other times',
+     lat: 40.694196480776995,
+     lng: -73.99181830901125,
+     N: 20
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4157,7 +4280,7 @@ const stops = [
      lat: 40.73587226699812,
      lng: -73.99053886181645,
      N: 16,
-     Q: 8
+     Q: 11
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4168,7 +4291,8 @@ const stops = [
      NOTES: 'N-all times, Q-nights, R-all times exc nights',
      lat: 40.74130266729,
      lng: -73.98934400102907,
-     N: 15
+     N: 15,
+     Q: 10
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4176,7 +4300,11 @@ const stops = [
      NAME: 'Prospect Ave',
      the_geom: 'POINT (-73.99287200067424 40.66541366712979)',
      LINE: 'D-N-R',
-     NOTES: 'D,N-nights, R-all other times'
+     NOTES: 'D,N-nights, R-all other times',
+     lat: 40.66541366712979,
+     lng: -73.99287200067424,
+     D: 26,
+     N: 26
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4184,7 +4312,11 @@ const stops = [
      NAME: '4th Av - 9th St',
      the_geom: 'POINT (-73.98830199974512 40.670846666842756)',
      LINE: 'D-N-R',
-     NOTES: 'D,N-nights, R-all other times'
+     NOTES: 'D,N-nights, R-all other times',
+     lat: 40.670846666842756,
+     lng: -73.98830199974512,
+     D: 25,
+     N: 25
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4217,7 +4349,8 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.67454199987086,
      lng: -73.89654800103929,
-     C: 38
+     A: 42,
+     C: 37
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4228,8 +4361,8 @@ const stops = [
      NOTES: 'A-all times, C-all times exc nights',
      lat: 40.67833366608023,
      lng: -73.90531600055341,
-     A: 22,
-     C: 37
+     A: 41,
+     C: 36
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4240,7 +4373,7 @@ const stops = [
      NOTES: 'N,R-all times',
      lat: 40.6413616662838,
      lng: -74.01788099953987,
-     N: 22
+     N: 31
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4248,7 +4381,10 @@ const stops = [
      NAME: '45th St',
      the_geom: 'POINT (-74.01000600074939 40.648938666612814)',
      LINE: 'N-R',
-     NOTES: 'N-nights, R-all times, skips nights northbound'
+     NOTES: 'N-nights, R-all times, skips nights northbound',
+     lat: 40.648938666612814,
+     lng: -74.01000600074939,
+     N: 29
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4259,8 +4395,8 @@ const stops = [
      NOTES: 'D,N,R-all times',
      lat: 40.65514366633887,
      lng: -74.00354899951809,
-     D: 24,
-     N: 21
+     D: 28,
+     N: 28
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4271,7 +4407,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.64648407726636,
      lng: -73.99444874451204,
-     D: 25
+     D: 29
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4279,7 +4415,10 @@ const stops = [
      NAME: '53rd St',
      the_geom: 'POINT (-74.01403399986317 40.64506866735981)',
      LINE: 'N-R',
-     NOTES: 'N-nights, R-all times, skips nights northbound'
+     NOTES: 'N-nights, R-all times, skips nights northbound',
+     lat: 40.64506866735981,
+     lng: -74.01403399986317,
+     N: 30
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4290,7 +4429,7 @@ const stops = [
      NOTES: 'D-all times',
      lat: 40.640912711444656,
      lng: -73.9942022375285,
-     D: 26
+     D: 30
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4298,7 +4437,11 @@ const stops = [
      NAME: '25th St',
      the_geom: 'POINT (-73.99809099974297 40.66039666692321)',
      LINE: 'D-N-R',
-     NOTES: 'D,N-nights, R-all other times'
+     NOTES: 'D,N-nights, R-all other times',
+     lat: 40.66039666692321,
+     lng: -73.99809099974297,
+     D: 27,
+     N: 27
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4321,8 +4464,9 @@ const stops = [
      NOTES: 'A-nights, C-all other times, E-all times',
      lat: 40.72622700129312,
      lng: -74.00373899843763,
-     C: 22,
-     E: 18
+     A: 26,
+     C: 21,
+     E: 30
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4355,6 +4499,7 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.80505813344211,
      lng: -73.95479778057312,
+     A: 12,
      C: 7
   },
   {
@@ -4366,7 +4511,7 @@ const stops = [
      NOTES: 'A,D-all times, B-weekdays and evenings, C-all times exc nights',
      lat: 40.811071672994565,
      lng: -73.95224799734774,
-     A: 8,
+     A: 11,
      C: 6,
      D: 13
   },
@@ -4379,7 +4524,8 @@ const stops = [
      NOTES: 'N-all times, Q-nights, R-all times exc nights',
      lat: 40.72432866597571,
      lng: -73.99770200045987,
-     N: 18
+     N: 18,
+     Q: 13
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4390,10 +4536,11 @@ const stops = [
      NOTES: 'N-all times, Q-nights, R-all times exc nights',
      lat: 40.73046499853991,
      lng: -73.99250799849149,
-     N: 17
+     N: 17,
+     Q: 12
   },
   {
-     2: 32,
+     2: 44,
      3: 14,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 402,
@@ -4405,7 +4552,7 @@ const stops = [
      lng: -74.00657099970202
   },
   {
-     2: 31,
+     2: 43,
      3: 13,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 403,
@@ -4418,7 +4565,7 @@ const stops = [
   },
   {
      1: 35,
-     2: 30,
+     2: 42,
      3: 12,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 404,
@@ -4430,7 +4577,7 @@ const stops = [
      lng: -74.00926600170112
   },
   {
-     2: 36,
+     2: 48,
      3: 18,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 405,
@@ -4442,7 +4589,7 @@ const stops = [
      lng: -73.98506379575646
   },
   {
-     2: 35,
+     2: 47,
      3: 17,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 406,
@@ -4484,7 +4631,7 @@ const stops = [
      NOTES: 'E-all times',
      lat: 40.71256392680817,
      lng: -74.00974461517701,
-     E: 20
+     E: 32
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4495,9 +4642,9 @@ const stops = [
      NOTES: 'A,E-all times, C-all times exc nights',
      lat: 40.72082400007119,
      lng: -74.0052290023424,
-     A: 14,
-     C: 23,
-     E: 19
+     A: 27,
+     C: 22,
+     E: 31
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4508,6 +4655,7 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.83051799929251,
      lng: -73.94151400082208,
+     A: 8,
      C: 3
   },
   {
@@ -4519,6 +4667,7 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.83601299923096,
      lng: -73.93989200188344,
+     A: 7,
      C: 2
   },
   {
@@ -4571,7 +4720,7 @@ const stops = [
      NOTES: 'N-nights, R-all other times'
   },
   {
-     1: 37,
+     1: 38,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 418,
      NAME: 'South Ferry',
@@ -4582,8 +4731,8 @@ const stops = [
      lng: -74.01316895919258
   },
   {
-     4: 23,
-     5: 23,
+     4: 37,
+     5: 34,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 419,
      NAME: 'Bowling Green',
@@ -4594,7 +4743,8 @@ const stops = [
      lng: -74.01400799803432
   },
   {
-     4: 22,
+     4: 36,
+     5: 33,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 420,
      NAME: 'Wall St',
@@ -4637,7 +4787,7 @@ const stops = [
      NOTES: 'M-all times'
   },
   {
-     1: 36,
+     1: 37,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 425,
      NAME: 'Rector St',
@@ -4648,15 +4798,19 @@ const stops = [
      lng: -74.01378300119742
   },
   {
+     1: 36,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 426,
      NAME: 'Cortlandt St',
      the_geom: 'POINT (-74.01218800112292 40.7118350008202)',
      LINE: '1',
-     NOTES: 'Temporarily closed'
+     NOTES: 'Temporarily closed',
+     lat: 40.7118350008202,
+     lng: -74.01218800112292
   },
   {
-     4: 21,
+     4: 35,
+     5: 32,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 427,
      NAME: 'Fulton St',
@@ -4686,7 +4840,7 @@ const stops = [
      NOTES: 'N-nights, R-all other times'
   },
   {
-     2: 33,
+     2: 45,
      3: 15,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 430,
@@ -4751,7 +4905,8 @@ const stops = [
      NOTES: 'N-all times, Q-weekdays and evenings',
      lat: 40.718814263587134,
      lng: -74.00105471306033,
-     N: 19
+     N: 19,
+     Q: 14
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4762,8 +4917,9 @@ const stops = [
      NOTES: 'A-nights, C-all other times, E-all times',
      lat: 40.74590599939995,
      lng: -73.99804100117201,
-     C: 19,
-     E: 15
+     A: 23,
+     C: 18,
+     E: 27
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4774,9 +4930,9 @@ const stops = [
      NOTES: 'A,E-all times, C-all times exc nights',
      lat: 40.752287000775894,
      lng: -73.99339099970578,
-     A: 11,
-     C: 18,
-     E: 14
+     A: 22,
+     C: 17,
+     E: 26
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4787,12 +4943,12 @@ const stops = [
      NOTES: 'E,F-all times, M-weekdays and evenings, R-all times exc nights',
      lat: 40.74653969115889,
      lng: -73.89129866519697,
-     E: 6,
+     E: 13,
      F: 9
   },
   {
      1: 30,
-     2: 29,
+     2: 37,
      3: 11,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 439,
@@ -4812,6 +4968,7 @@ const stops = [
      NOTES: 'A-nights, B-weekdays and evenings, C-all times exc nights',
      lat: 40.817905559212676,
      lng: -73.94753480879213,
+     A: 10,
      C: 5
   },
   {
@@ -4856,12 +5013,13 @@ const stops = [
      NOTES: 'A,E-all times, C-all times exc nights',
      lat: 40.740893000193296,
      lng: -74.00168999937027,
-     A: 12,
-     C: 20,
-     E: 16
+     A: 24,
+     C: 19,
+     E: 28
   },
   {
      3: 25,
+     4: 45,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 445,
      NAME: 'Nostrand Ave',
@@ -4872,7 +5030,7 @@ const stops = [
      lng: -73.9504262489579
   },
   {
-     2: 34,
+     2: 46,
      3: 16,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 446,
@@ -4892,7 +5050,8 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.68137966658742,
      lng: -73.95684800014614,
-     C: 31
+     A: 35,
+     C: 30
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4903,7 +5062,8 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.68326299912644,
      lng: -73.96583799857275,
-     C: 30
+     A: 34,
+     C: 29
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4914,6 +5074,7 @@ const stops = [
      NOTES: 'M-all times'
   },
   {
+     4: 17,
      6: 21,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 450,
@@ -4925,8 +5086,8 @@ const stops = [
      lng: -73.94424999687163
   },
   {
-     4: 16,
-     5: 18,
+     4: 20,
+     5: 27,
      6: 24,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 451,
@@ -4957,8 +5118,8 @@ const stops = [
      NOTES: 'A-all times, C-all times exc nights',
      lat: 40.69933699977884,
      lng: -73.99053100065458,
-     A: 17,
-     C: 26
+     A: 30,
+     C: 25
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -4969,10 +5130,12 @@ const stops = [
      NOTES: 'A-nights, C-all other times',
      lat: 40.68611300020567,
      lng: -73.97394599849406,
-     C: 29
+     A: 33,
+     C: 28
   },
   {
-     2: 43,
+     2: 55,
+     5: 39,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 455,
      NAME: 'President St',
@@ -4994,6 +5157,7 @@ const stops = [
      lng: -73.87875099990931
   },
   {
+     4: 31,
      6: 35,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 457,
@@ -5005,6 +5169,7 @@ const stops = [
      lng: -73.99465900006331
   },
   {
+     4: 18,
      6: 22,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 458,
@@ -5024,8 +5189,8 @@ const stops = [
      NOTES: 'S to Ozone Park-Lefferts Blvd-nights, C-all other times, A-all times',
      lat: 40.675376998239365,
      lng: -73.87210600099675,
-     A: 23,
-     C: 41
+     A: 45,
+     C: 40
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -5036,7 +5201,7 @@ const stops = [
      NOTES: 'A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights',
      lat: 40.67984300135503,
      lng: -73.85147000026086,
-     A: 26
+     A: 48
   },
   {
      URL: 'http://web.mta.info/nyct/service/',
@@ -5047,9 +5212,10 @@ const stops = [
      NOTES: 'Q-all times',
      lat: 40.6409401651401,
      lng: -73.96379005505493,
-     Q: 15
+     Q: 23
   },
   {
+     4: 16,
      6: 20,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 462,
@@ -5073,6 +5239,7 @@ const stops = [
   },
   {
      1: 34,
+     2: 41,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 464,
      NAME: 'Franklin St',
@@ -5091,7 +5258,7 @@ const stops = [
      NOTES: 'A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights',
      lat: 40.67937100115432,
      lng: -73.85899200206335,
-     A: 25
+     A: 47
   },
   {
      7: 20,
@@ -5105,6 +5272,7 @@ const stops = [
      lng: -73.98196299856706
   },
   {
+     4: 32,
      6: 36,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 467,
@@ -5117,7 +5285,7 @@ const stops = [
   },
   {
      4: 15,
-     5: 17,
+     5: 26,
      6: 19,
      URL: 'http://web.mta.info/nyct/service/',
      OBJECTID: 468,
@@ -5137,10 +5305,10 @@ const stops = [
      NOTES: 'D,F,N,Q-all times',
      lat: 40.57728100006751,
      lng: -73.9812359981396,
-     D: 37,
+     D: 41,
      F: 45,
-     N: 32,
-     Q: 27
+     N: 41,
+     Q: 35
   },
   {
      7: 22,

@@ -109,14 +109,38 @@ const lines = [
   },
 ];
 
+function removeCurrentStop(stopsOnLine, currentStop) {
+  const removeIndex = stopsOnLine.findIndex(stop => {
+    return stop.OBJECTID === currentStop.OBJECTID;
+  })
+  stopsOnLine.splice(removeIndex, 1);
+}
+
+function findClosestStop(stopsOnLine, currentStop) {
+  stopsOnLine = stopsOnLine.map(stop => {
+    let [termLat, termLng] = convertToLatLng(currentStop.the_geom);
+    let [stopLat, stopLng] = convertToLatLng(stop.the_geom);
+    stop.lat = stopLat;
+    stop.lng = stopLng;
+    stop.distance = distance(termLat, termLng, stopLat, stopLng);
+    return stop;
+  });
+  return stopsOnLine.reduce((min, stop) => {
+    if (min.distance < stop.distance) return min;
+    else return stop;
+  })
+
+}
+
 lines.forEach(line => {
   let stopsOnLine = subwayStops.filter(stop => {
     // For 'E' line, make sure not to match 'Express' in LINE information
+    let regex = new RegExp(line.line + '.{0,6}-all');
     if (line.line === 'E') {
-      if (stop.LINE.includes(line.line) && !stop.LINE.includes('Express')) {
+      if (stop.NOTES.match(regex) && !stop.LINE.includes('Express')) {
         return true;
       }
-    } else if (stop.LINE.includes(line.line)) {
+    } else if (stop.NOTES.match(regex)) {
       return true;
     }
     return false;
@@ -128,18 +152,14 @@ lines.forEach(line => {
     }
   });
 
-  stopsOnLine = stopsOnLine.map(stop => {
-    let [termLat, termLng] = convertToLatLng(terminalStop.the_geom);
-    let [stopLat, stopLng] = convertToLatLng(stop.the_geom);
-    stop.lat = stopLat;
-    stop.lng = stopLng;
-    stop.distance = distance(termLat, termLng, stopLat, stopLng);
-    return stop;
-  });
-
-  let sortedStopsOnLine = stopsOnLine.sort((a, b) => {
-    return a.distance - b.distance;
-  });
+  let sortedStopsOnLine = [];
+  let currentStop = terminalStop;
+  sortedStopsOnLine.push(currentStop);
+  while (stopsOnLine.length) {
+    currentStop = findClosestStop(stopsOnLine, currentStop);
+    removeCurrentStop(stopsOnLine, currentStop);
+    sortedStopsOnLine.push(currentStop);
+  }
 
   sortedStopsOnLine.forEach((stop, i) => {
     subwayStops = subwayStops.map(s => {

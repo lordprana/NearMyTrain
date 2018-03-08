@@ -17,6 +17,33 @@ const displayResultName = index => () => {
   showResult.classList.toggle('show');
 };
 
+const calculateFitBounds = stations => {
+  const west = stations.reduce((min, station) => {
+    if (station.lng < min.lng) return station;
+    else return min;
+  });
+  const south = stations.reduce((min, station) => {
+    if (station.lat < min.lat) return station;
+    else return min;
+  });
+  const east = stations.reduce((max, station) => {
+    if (station.lng > max.lng) return station;
+    else return max;
+  });
+  const north = stations.reduce((max, station) => {
+    if (station.lat > max.lat) return station;
+    else return max;
+  });
+  console.log([west.lng, south.lat, east.lng, north.lat]);
+  //return [west.lng, south.lat, east.lng, north.lat];
+  const padding = .01;
+  return [west.lng - padding, south.lat - padding, east.lng + padding, north.lat + padding];
+};
+
+      // fitBounds={nearbyStations.length && calculateFitBounds(nearbyStations)}>
+      // fitBounds={[40.824766360871905, -73.94408792823116, 40.86807199999737, -73.91989900100465]}>
+      // center={(homeStation && [homeStation.lng, homeStation.lat])
+      //   || NEW_YORK_COORDINATES}
 const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
 
   return (
@@ -26,9 +53,8 @@ const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
         height: '100vh',
         width: '100vw'
       }}
-      center={(homeStation && [homeStation.lng, homeStation.lat])
-        || NEW_YORK_COORDINATES}
-      zoom={[13]}>
+      center={NEW_YORK_COORDINATES}
+      fitBounds={nearbyStations.length && calculateFitBounds(nearbyStations)}>
       {
         homeStation &&
         <Marker
