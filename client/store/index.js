@@ -6,8 +6,10 @@ import homeStation from './home-station';
 import nearbyStations from './nearby-stations';
 import searchResults from './search-results';
 import activeLine from './active-line';
+import options from './options';
 
-const reducer = combineReducers({homeStation, nearbyStations, searchResults, activeLine});
+const reducer = combineReducers({homeStation, nearbyStations, searchResults,
+  activeLine, options});
 const middleware = composeWithDevTools(applyMiddleware(
   thunkMiddleware,
   createLogger({collapsed: true})
@@ -19,3 +21,4 @@ export * from './home-station';
 export * from './nearby-stations';
 export * from './search-results';
 export * from './active-line';
+export * from './options';

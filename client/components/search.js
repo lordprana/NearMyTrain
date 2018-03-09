@@ -2,14 +2,18 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {addResultsNearStations} from '../store';
 
-const handleSubmit = (stations, dispatchAddResults) => evt => {
+const convertMilesToMeters = mi => {
+  return mi * 1609.344; // Conversion ratio
+}
+
+const handleSubmit = (stations, miles, dispatchAddResults) => evt => {
   evt.preventDefault();
-  dispatchAddResults(stations, 100, evt.target.query.value);
+  dispatchAddResults(stations, convertMilesToMeters(miles), evt.target.query.value);
 };
 
 
-const Search = ({stations, dispatchAddResults}) => (
-  <form onSubmit={handleSubmit(stations, dispatchAddResults)} className="search-form">
+const Search = ({stations, miles, dispatchAddResults}) => (
+  <form onSubmit={handleSubmit(stations, miles, dispatchAddResults)} className="search-form">
     <input type="text" name="query" placeholder="search..." className="search-input"/>
     <button type="submit" value="Submit"><i className="fas fa-search"></i></button>
   </form>
@@ -20,7 +24,8 @@ const Search = ({stations, dispatchAddResults}) => (
  */
 const mapState = state => {
   return {
-    stations: [...state.nearbyStations, state.homeStation]
+    stations: [...state.nearbyStations, state.homeStation],
+    miles: state.options.walkingDistance
   };
 };
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import stops from '../data/subway-stops';
 import {setStations} from '../store';
-import {queryPlaces} from '../api/google-places';
 
 const getSortedStops = line => {
   const filteredStops = stops.filter(stop => stop.hasOwnProperty(line));
@@ -15,9 +14,10 @@ const handleChange = (line, numStops, dispatchSetStations) => evt => {
   dispatchSetStations(stops[evt.target.value - 1], line, numStops, stops); // Object Ids are 1 indexed
 }
 
-const SelectStop = ({line, dispatchSetStations}) => (
+const SelectStop = ({line, numStops, dispatchSetStations}) => {
+  return (
     <select
-      onChange={handleChange(line, 5, dispatchSetStations)}
+      onChange={handleChange(line, numStops, dispatchSetStations)}
       className="home-station-select"
       defaultValue="disabled">
       <option value="disabled">Choose home stop</option>
@@ -27,14 +27,15 @@ const SelectStop = ({line, dispatchSetStations}) => (
         ))
       }
     </select>
-);
+)};
 
 /**
  * CONTAINER
  */
 const mapState = state => {
   return {
-    line: state.activeLine
+    line: state.activeLine,
+    numStops: state.options.numStops
   };
 };
 

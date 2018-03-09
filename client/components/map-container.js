@@ -34,9 +34,7 @@ const calculateFitBounds = stations => {
     if (station.lat > max.lat) return station;
     else return max;
   });
-  console.log([west.lng, south.lat, east.lng, north.lat]);
-  //return [west.lng, south.lat, east.lng, north.lat];
-  const padding = .01;
+  const padding = 0.01;
   return [west.lng - padding, south.lat - padding, east.lng + padding, north.lat + padding];
 };
 
