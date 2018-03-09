@@ -16,8 +16,9 @@ const handleSubmit = (stations, miles, dispatchAddResults) => evt => {
 
 const Search = ({stations, miles, dispatchAddResults}) => (
   <form onSubmit={handleSubmit(stations, miles, dispatchAddResults)} className="search-form">
-    <input type="text" name="query" placeholder="search..." className="search-input" />
-    <button type="submit" value="Submit"><i className="fas fa-search" /></button>
+    <div className="search-input-container">
+      <input type="text" name="query" placeholder="Search..." className="search-input" />
+    </div>
   </form>
 );
 
