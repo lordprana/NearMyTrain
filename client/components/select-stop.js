@@ -16,22 +16,27 @@ const handleChange = (line, numStops, dispatchSetStations) => evt => {
 }
 
 const SelectStop = ({line, dispatchSetStations}) => (
-  <select
-    onChange={handleChange(line, 5, dispatchSetStations)}
-    className="home-station-select">
-    <option selected="true" disabled="disabled">Choose home stop</option>
-    {
-      getSortedStops(line).map(stop => (
-        <option key={stop.OBJECTID} value={stop.OBJECTID}>{stop.NAME}</option>
-      ))
-    }
-  </select>
+    <select
+      onChange={handleChange(line, 5, dispatchSetStations)}
+      className="home-station-select"
+      defaultValue="disabled">
+      <option value="disabled">Choose home stop</option>
+      {
+        getSortedStops(line).map(stop => (
+          <option key={stop.OBJECTID} value={stop.OBJECTID}>{stop.NAME}</option>
+        ))
+      }
+    </select>
 );
 
 /**
  * CONTAINER
  */
-const mapState = null;
+const mapState = state => {
+  return {
+    line: state.activeLine
+  };
+};
 
 const mapDispatch = {
   dispatchSetStations: setStations,
