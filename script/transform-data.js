@@ -107,6 +107,10 @@ const lines = [
     line: 'Q',
     terminalStop: '96th St'
   },
+  {
+    line: 'R',
+    terminalStop: 'Forest Hills - 71st Av'
+  }
 ];
 
 function removeCurrentStop(stopsOnLine, currentStop) {

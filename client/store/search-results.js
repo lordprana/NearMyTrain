@@ -36,9 +36,7 @@ export const addResultsNearStations = (stations, radius, query) =>
       setTimeout(() => {
         queryPlaces({ lat: station.lat, lng: station.lng }, radius, query,
           (results, status) => {
-            console.log("STATUS", status);
-            console.log("RESULTS", results);
-            dispatch(addSearchResults(results));
+            if (results !== null) dispatch(addSearchResults(results));
             numResults++;
             if (numResults === stations.length) {
               dispatch(fetchedSearchResults());

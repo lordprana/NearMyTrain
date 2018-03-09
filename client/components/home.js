@@ -4,7 +4,7 @@ import {SelectStop, MapContainer, Search} from './index';
 const Home = () => (
   <div>
     <MapContainer />
-    <SelectStop line="A"/>
+    <SelectStop line="J"/>
     <Search />
   </div>
 );
