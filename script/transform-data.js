@@ -116,7 +116,7 @@ const lines = [
 function removeCurrentStop(stopsOnLine, currentStop) {
   const removeIndex = stopsOnLine.findIndex(stop => {
     return stop.OBJECTID === currentStop.OBJECTID;
-  })
+  });
   stopsOnLine.splice(removeIndex, 1);
 }
 
@@ -132,7 +132,7 @@ function findClosestStop(stopsOnLine, currentStop) {
   return stopsOnLine.reduce((min, stop) => {
     if (min.distance < stop.distance) return min;
     else return stop;
-  })
+  });
 
 }
 

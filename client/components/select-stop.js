@@ -12,7 +12,7 @@ const getSortedStops = line => {
 
 const handleChange = (line, numStops, dispatchSetStations) => evt => {
   dispatchSetStations(stops[evt.target.value - 1], line, numStops, stops); // Object Ids are 1 indexed
-}
+};
 
 const SelectStop = ({line, numStops, dispatchSetStations}) => {
   return (
@@ -27,7 +27,7 @@ const SelectStop = ({line, numStops, dispatchSetStations}) => {
         ))
       }
     </select>
-)};
+);};
 
 /**
  * CONTAINER

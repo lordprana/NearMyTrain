@@ -4,18 +4,20 @@ import {addResultsNearStations} from '../store';
 
 const convertMilesToMeters = mi => {
   return mi * 1609.344; // Conversion ratio
-}
+};
 
 const handleSubmit = (stations, miles, dispatchAddResults) => evt => {
   evt.preventDefault();
-  dispatchAddResults(stations, convertMilesToMeters(miles), evt.target.query.value);
+  if (stations[0] !== null) {
+    dispatchAddResults(stations, convertMilesToMeters(miles), evt.target.query.value);
+  }
 };
 
 
 const Search = ({stations, miles, dispatchAddResults}) => (
   <form onSubmit={handleSubmit(stations, miles, dispatchAddResults)} className="search-form">
-    <input type="text" name="query" placeholder="search..." className="search-input"/>
-    <button type="submit" value="Submit"><i className="fas fa-search"></i></button>
+    <input type="text" name="query" placeholder="search..." className="search-input" />
+    <button type="submit" value="Submit"><i className="fas fa-search" /></button>
   </form>
 );
 

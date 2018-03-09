@@ -7,8 +7,8 @@ export const queryPlaces = (location, radius, query, callback) => {
     location: loc,
     radius: radius,
     keyword: query
-  }
+  };
 
   const service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback)
+  service.nearbySearch(request, callback);
 };

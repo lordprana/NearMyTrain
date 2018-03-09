@@ -32,7 +32,7 @@ export const setStations = (homeStation, line, numStops, stationData) =>
     });
     dispatch(setNearbyStations(nearbyStations));
     dispatch(setHomeStation(homeStation));
-  }
+  };
 
 /**
  * REDUCER

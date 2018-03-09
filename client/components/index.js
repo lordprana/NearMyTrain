@@ -9,3 +9,4 @@ export {default as MapContainer} from './map-container';
 export {default as Search} from './search';
 export {default as SelectLine} from './select-line';
 export {default as Options} from './options';
+export {default as Loader} from './loader';

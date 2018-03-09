@@ -38,10 +38,6 @@ const calculateFitBounds = stations => {
   return [west.lng - padding, south.lat - padding, east.lng + padding, north.lat + padding];
 };
 
-      // fitBounds={nearbyStations.length && calculateFitBounds(nearbyStations)}>
-      // fitBounds={[40.824766360871905, -73.94408792823116, 40.86807199999737, -73.91989900100465]}>
-      // center={(homeStation && [homeStation.lng, homeStation.lat])
-      //   || NEW_YORK_COORDINATES}
 const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
 
   return (
@@ -95,7 +91,7 @@ const MapContainer = ({homeStation, nearbyStations, searchResults}) => {
                   {result.name}
                 </a>
               </div>
-              <img src={result.icon} height="24" width="24" />
+              <img src="/images/pin.png" height="24" width="24" />
             </div>
           </Marker>
         ))

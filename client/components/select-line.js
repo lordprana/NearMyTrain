@@ -7,12 +7,12 @@ const handleClick = (line, dispatchSetActiveLine) => evt => {
   // Handle presentation of active icon
   [...document.getElementsByClassName('select-line-icon')].forEach(element => {
     element.classList.remove('active-select-line-icon');
-  })
+  });
   evt.target.classList.add('active-select-line-icon');
 
   // Update active icon in store
   dispatchSetActiveLine(line);
-}
+};
 
 const SelectLine = ({dispatchSetActiveLine}) => (
   <div className="select-line-container-for-scroll" >
@@ -45,7 +45,7 @@ const mapDispatch = dispatch => {
     dispatchSetActiveLine: line => {
       dispatch(setActiveLine(line));
     }
-  }
+  };
 };
 
 export default connect(mapState, mapDispatch)(SelectLine);
