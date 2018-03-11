@@ -10,8 +10,18 @@ const getSortedStops = line => {
   });
 };
 
-const handleChange = (line, numStops, dispatchSetStations) => evt => {
-  dispatchSetStations(stops[evt.target.value - 1], line, numStops, stops); // Object Ids are 1 indexed
+const handleStationSelect = (stationId, line, numStops, dispatchSetStations) => () => {
+  dispatchSetStations(stops[stationId - 1], line, numStops, stops); // Station Ids are 1 indexed
+};
+
+const showStopList = () => {
+  document.getElementById('stop-list-background').classList
+    .add('stop-list-background-active');
+};
+
+const hideStopList = () => {
+  document.getElementById('stop-list-background').classList
+    .remove('stop-list-background-active');
 };
 
 // const SelectStop = ({line, numStops, dispatchSetStations}) => {
@@ -31,9 +41,35 @@ const handleChange = (line, numStops, dispatchSetStations) => evt => {
 
 const SelectStop = ({line, numStops, homeStation, dispatchSetStations}) => {
   return (
-    <div className="select-stop">
-      <div className="select-stop-text">Choose your home station</div>
-      <img className="select-stop-home" src="images/home.png" />
+    <div className="select-stop-parent">
+      <div className="select-stop" onClick={showStopList}>
+        <div className="select-stop-text">
+          {
+            homeStation && homeStation.LINE.includes(line)
+            ? homeStation.NAME
+            : 'Choose your home station'
+          }
+         </div>
+        <img className="select-stop-home" src="images/home.png" />
+      </div>
+      <div
+        id="stop-list-background"
+        className="stop-list-background"
+        onClick={hideStopList}>
+        <div className="stop-list">
+          {
+            getSortedStops(line).map(stop => (
+              <div
+                key={stop.OBJECTID}
+                onClick={handleStationSelect(stop.OBJECTID, line, numStops,
+                                             dispatchSetStations)}>
+                <div className="stop-list-item">{stop.NAME}</div>
+                <hr />
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 };

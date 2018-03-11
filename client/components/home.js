@@ -1,12 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {SelectStop, SelectLine, MapContainer, Search, Options, Loader} from './index';
 
-const Home = ({loading}) => (
+const Home = () => (
   <div>
-    {
-      loading && <Loader />
-    }
+    <Loader />
     <MapContainer />
     <Options />
     <SelectLine />
@@ -15,15 +12,4 @@ const Home = ({loading}) => (
   </div>
 );
 
-/**
- * CONTAINER
- */
-const mapState = state => {
-  return {
-    loading: state.searchResults.fetching,
-  };
-};
-
-const mapDispatch = null;
-
-export default connect(mapState, mapDispatch)(Home);
+export default Home;

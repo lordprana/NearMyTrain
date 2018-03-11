@@ -48,10 +48,9 @@ form div {
 
 .select-stop {
   display: flex;
-  justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 79px;
+  bottom: 69px;
   left: 50%;
   margin-left: -125px;
   width: 225px;
@@ -59,36 +58,87 @@ form div {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: white;
-  text-align: center;
   padding: 5px;
   padding-bottom: 3px;
-  border: black solid 2px;;
+  z-index: 4;
+  user-select: none;
 }
 
 .select-stop-home {
   height: 20px;
   width: 20px;
   margin-left: 8px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .select-stop-text {
+  margin-left: 6px;
+  width: 187px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.select-stop-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.stop-list-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 8;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s, visibility .5s;
+}
+
+.stop-list-background-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.stop-list {
+  background-color: white;
+  width: 80vw;
+  max-width: 300px;
+  height: 400px;
+  overflow-y: scroll;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.stop-list-item {
+  padding: 5px;
   user-select: none;
+}
+
+.select-stop-select::-ms-expand {
+  display: none;
 }
 
 .search-input-container {
   width: 225px;
   background-color: white;
-  border: black solid 2px;
   height: 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: fixed;
-  bottom: 37px;
+  bottom: 24px;
   left: 50%;
   margin-left: -125px;
   margin-bottom: 0px;
   padding: 5px;
+  z-index: 4;
 }
 
 .search-input {
@@ -187,7 +237,7 @@ form div {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 4;
+  z-index: 5;
   opacity: 0;
   transition: opacity 1s, visibility 1s;
   visibility: hidden;
@@ -207,7 +257,7 @@ form div {
   width: 200px;
   height: 180px;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .option-title {
@@ -248,6 +298,14 @@ form div {
    display: flex;
    justify-content: center;
    align-items: center;
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility .5s, opacity .5s;
+ }
+
+ .loader-container-active {
+   visibility: visible;
+   opacity: 1;
  }
 
  .spinner {
