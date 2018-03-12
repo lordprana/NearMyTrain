@@ -114,11 +114,11 @@ form div {
   height: 400px;
   overflow-y: scroll;
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .stop-list-item {
-  padding: 5px;
+  padding: 15px 5px;
   user-select: none;
 }
 
